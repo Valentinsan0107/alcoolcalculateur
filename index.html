@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Logiciel de calcul du taux d'alcoolémie</title>
+  <link rel="icon" type="image/png" href="img/icon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/script_1.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h2 id=slogan>Logiciel pour calculer le taux d'alcoolémie</h2>
+      <h4>Travail pour le pôle DSI de Transaction EDHEC réalisé par Zakaria Abouamal et Valentin Sandillon</h4>
+      <h5 id=directions>Précisions</h5>
+      <p>Pour des raisons de calcul d'unité d'alcool, les doses considérées dans les différentes catégories d'alcool sont les suivantes : 3 cl pour l'alcool fort (1 unité d'alcool), 10 cl pour une coupe de Champagne (1 unité d'alcool), 10 cl pour un verre de vin (1 unité d'alcool) et 50 cl pour une pinte (3,6 unités d'alcool).</p>
+    </div>
+    <div id="survey-box">
+    <form id="survey">
+
+
+
+
+      <div class="form-group flex_formgroup">
+      <img class="img_alcool" src="img/alcool.png">
+      <label for="qty">Shot d'alcool fort</label>
+      <div class="flex_button">
+      <button class="qtyminus gauche" aria-hidden="true">&minus;</button>
+      <input type="number" name="qty" id="qty" min="0" max="20" step="1" value="0" required>
+      <button class="qtyplus droite" aria-hidden="true">&plus;</button>
+      </div>
+      </div>
+
+
+      <div class="form-group flex_formgroup">
+      <img class="img_alcool" src="img/champaign.png">
+      <label for="qty_2">Coupe de Champagne</label>
+      <div class="flex_button">
+      <button class="qtyminus_2 gauche" aria-hidden="true">&minus;</button>
+      <input type="number" name="qty_2" id="qty_2" min="0" max="20" step="1" value="0" required>
+      <button class="qtyplus_2 droite" aria-hidden="true">&plus;</button>
+      </div>
+      </div>
+
+            <div class="form-group flex_formgroup">
+      <img class="img_alcool" src="img/de-lalcool.png">
+      <label for="qty_3">Verre de vin</label>
+      <div class="flex_button">
+      <button class="qtyminus_3 gauche" aria-hidden="true">&minus;</button>
+      <input type="number" name="qty_3" id="qty_3" min="0" max="20" step="1" value="0" required>
+      <button class="qtyplus_3 droite" aria-hidden="true">&plus;</button>
+      </div>
+      </div>
+
+            <div class="form-group flex_formgroup">
+      <img class="img_alcool" src="img/biere.png">
+      <label for="qty_4">Pinte</label>
+      <div class="flex_button">
+      <button class="qtyminus_4 gauche" aria-hidden="true">&minus;</button>
+      <input type="number" name="qty_4" id="qty_4" min="0" max="20" step="1" value="0" required>
+      <button class="qtyplus_4 droite" aria-hidden="true">&plus;</button>
+      </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="userWeight">Poids :</label>
+        <input type="number" class="form-control" id="userWeight" placeholder="Ton poids en kg" name="weight" width="30" required>
+        <div class="valid-feedback">Valide.</div>
+        <div class="invalid-feedback">Entrez un nombre s'il vous plaît.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Minutes après ta première conso :</label>
+        <input type="number" class="form-control" id="userTime" placeholder="La durée en minute" name="userTime" required>
+        <div class="valid-feedback">Valide.</div>
+        <div class="invalid-feedback">Entrez un nombre s'il vous plaît.</div>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioMale" name="optradio">Je suis un Homme
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioFemale" name="optradio">
+          Je suis une Femme
+        </label>
+      </div>
+      <button type="submit" id="sub-button">Voir les résultats</button>
+    </form>
+  </div>
+
+    <div id=ok>
+      <h2>L'alcool est présent à <span class="bac"></span>% dans ton sang.</h2>
+      <p>Tu es donc encore sobre.</p>
+      <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Retour</button>
+    </div>
+    <div id=notok>
+      <h2>L'alcool est présent à <span class="bac"></span>% dans ton sang.</h2>
+      <p>Tu es donc alcoolisé.</p>
+      <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href">Retour</button>
+    </div>
+
+  </div>
+  <script  src="./script_1.js"></script>
+  <script  src="./script_2.js"></script>
+  <script  src="./script_3.js"></script>
+  <script  src="./script_4.js"></script>
+</body>
+
+</html>
