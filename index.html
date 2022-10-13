@@ -27,6 +27,8 @@
       <h4>Travail pour le pôle DSI de Transaction EDHEC réalisé par Zakaria Abouamal et Valentin Sandillon</h4>
       <h5 id=directions>Précisions</h5>
       <p>Pour des raisons de calcul d'unité d'alcool, les doses considérées dans les différentes catégories d'alcool sont les suivantes : 3 cl pour l'alcool fort (1 unité d'alcool), 10 cl pour une coupe de Champagne (1 unité d'alcool), 10 cl pour un verre de vin (1 unité d'alcool) et 50 cl pour une pinte (3,6 unités d'alcool).</p>
+      <h5 id=directions>Comment ça marche ?</h5>
+      <p>Afin de connaître ton niveau actuel d'alcoolémie, tu n'as qu'à renseigné ci-dessous dans un premier temps la quantité des différents alcools que tu as consommés en indiquant leurs différents degrés puis dans un second temps renseigner certaines informations sur toi afin de pouvoir affiner plus précisément ton taux d'alcoolémie réel.</p>
     </div>
     <div id="survey-box">
     <form id="survey">
@@ -44,6 +46,13 @@
       </div>
       </div>
 
+            <div class="form-group">
+        <label for="userDegShot">Degrès du shot :</label>
+        <input type="number" class="form-control" id="userDegShot" placeholder="Le degrés du shot" name="degshot" width="30" required>
+        <div class="valid-feedback">Valide.</div>
+        <div class="invalid-feedback">Entrez un nombre s'il vous plaît.</div>
+      </div>
+
 
       <div class="form-group flex_formgroup">
       <img class="img_alcool" src="img/champaign.png">
@@ -53,6 +62,13 @@
       <input type="number" name="qty_2" id="qty_2" min="0" max="20" step="1" value="0" required>
       <button class="qtyplus_2 droite" aria-hidden="true">&plus;</button>
       </div>
+      </div>
+
+                  <div class="form-group">
+        <label for="userDegChampagne">Degrès du Champagne :</label>
+        <input type="number" class="form-control" id="userDegChampagne" placeholder="Le degrés du Champagne" name="degChampagne" width="30" required>
+        <div class="valid-feedback">Valide.</div>
+        <div class="invalid-feedback">Entrez un nombre s'il vous plaît.</div>
       </div>
 
             <div class="form-group flex_formgroup">
@@ -65,6 +81,13 @@
       </div>
       </div>
 
+                        <div class="form-group">
+        <label for="userDegVin">Degrès du vin :</label>
+        <input type="number" class="form-control" id="userDegVin" placeholder="Le degrés du vin" name="degVin" width="30" required>
+        <div class="valid-feedback">Valide.</div>
+        <div class="invalid-feedback">Entrez un nombre s'il vous plaît.</div>
+      </div>
+
             <div class="form-group flex_formgroup">
       <img class="img_alcool" src="img/biere.png">
       <label for="qty_4">Pinte</label>
@@ -75,10 +98,25 @@
       </div>
       </div>
 
+      <div class="form-group">
+        <label for="userDegBiere">Degrès de la bière :</label>
+        <input type="number" class="form-control" id="userDegBiere" placeholder="Le degrés de la bière" name="degBiere" width="30" required>
+        <div class="valid-feedback">Valide.</div>
+        <div class="invalid-feedback">Entrez un nombre s'il vous plaît.</div>
+      </div>
+
+      <div class="separation"></div>
 
       <div class="form-group">
         <label for="userWeight">Poids :</label>
         <input type="number" class="form-control" id="userWeight" placeholder="Ton poids en kg" name="weight" width="30" required>
+        <div class="valid-feedback">Valide.</div>
+        <div class="invalid-feedback">Entrez un nombre s'il vous plaît.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="userAge">Âge :</label>
+        <input type="number" class="form-control" id="userAge" placeholder="Ton âge en année" name="age" width="30" required>
         <div class="valid-feedback">Valide.</div>
         <div class="invalid-feedback">Entrez un nombre s'il vous plaît.</div>
       </div>
@@ -89,6 +127,21 @@
         <div class="valid-feedback">Valide.</div>
         <div class="invalid-feedback">Entrez un nombre s'il vous plaît.</div>
       </div>
+
+      <label for="time">Es-tu à jeun ?</label>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioJeunoui" name="optJeun">Oui
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioJeunnon" name="optJeun">
+          Non
+        </label>
+      </div>
+
+      <label for="time" class="fix_margin">Quel est ton sexe ?</label>
       <div class="form-check">
         <label class="form-check-label">
           <input type="radio" class="form-check-input" id="radioMale" name="optradio">Je suis un Homme
@@ -100,6 +153,24 @@
           Je suis une Femme
         </label>
       </div>
+
+      <!-- Je met cette section en commentaire car impossible d'interpréter de manière pertinente cet indicateur dans la formule mathématique
+
+      <label for="time" class="fix_margin">Es-tu actuellement sous traitement médicamenteux ?</label>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioMedicoui" name="optMedic">Oui
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioMedicnon" name="optMedic">
+          Non
+        </label>
+      </div>
+
+      -->
+
       <button type="submit" id="sub-button">Voir les résultats</button>
     </form>
   </div>
