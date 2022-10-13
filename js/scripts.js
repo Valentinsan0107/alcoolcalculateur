@@ -38,7 +38,7 @@ var updateBac = function() {
 };
 
 var driveCheck = function() {
-  if (user.userBac <= 0.7) {
+  if (user.userBac <= 0.2) {
     console.log("User CAN drive");
     return true;
   } else {
